@@ -1,0 +1,89 @@
+
+// Variables
+$primary-color: #284854;
+$secondary-color: #8bc441;
+$tertiary-color: #60c1bd;
+$light-color: #f4f6f0;
+$website-width: 1100px;
+
+
+// Utility Classes
+
+.container {
+    max-width: $website-width;
+    margin: auto;
+    padding: 1.5rem 0;
+    
+}
+
+%btn-shared {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    color: #fff;
+
+
+}
+
+.btn {
+    &-primary {
+        @extend %btn-shared;
+        &:hover {
+            background-color: #fff;
+            color: $primary-color;
+        }
+    }
+
+    &-secondary {
+        @extend %btn-shared;
+        color: $tertiary-color;
+        border-color: $tertiary-color;
+        padding: 1.5rem 2rem;
+        margin: 2rem 0;
+        border-radius: 40px;
+        &:hover {
+            color: #fff;
+            background-color: $tertiary-color;
+        }
+    }
+}
+
+.card {
+    padding: 2rem;
+    background-color: $light-color;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 5px solid $light-color;
+    border-radius: 15px;
+    color: $tertiary-color;
+
+    img {
+        margin-right: 1rem;
+    }
+
+    .wrap {
+        p {
+            font-weight: 400;
+        }
+    }
+
+    &:hover {
+        box-shadow: #ccc 0 5px 4px;
+
+        img {
+            transform: rotate(-15deg);
+        }
+
+        h2 {
+            color: $tertiary-color;
+        }
+
+    }
+}
+
+.p-tertiary {
+    color: $tertiary-color;
+    font-weight: 400;
+}
